@@ -51,7 +51,8 @@ const UploadForm = () => {
             <div className="card">
               <div className="card-body">
                 <h6>File Information:</h6>
-                <pre>{fileDetails}</pre>
+                <p>
+                <pre>{fileDetails}</pre></p>
               </div>
             </div>
           </div>
