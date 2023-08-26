@@ -35,7 +35,7 @@ const UploadForm = () => {
     }
   };
 
-  return (
+   return (
     <div className="card upload-card">
       <div className="card-body">
         <h5 className="card-title upload-title">Upload File</h5>
@@ -51,8 +51,7 @@ const UploadForm = () => {
             <div className="card">
               <div className="card-body">
                 <h6>File Information:</h6>
-                <p>
-                <pre>{fileDetails}</pre></p>
+                <pre className="file-details">{fileDetails}</pre>
               </div>
             </div>
           </div>
