@@ -27,11 +27,13 @@ jobs:
     - name: Build and Push Backend Docker image
       working-directory: ./backend
       run: |
+        docker login
         docker image build -t anmolbakshi21/backend .
         docker push anmolbakshi21/backend
     - name: Build and Push Frontend Docker image
       working-directory: ./
       run: |
+        docker login
         docker image build -t anmolbakshi21/frontend .
         docker push anmolbakshi21/frontend
 
