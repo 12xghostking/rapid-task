@@ -9,7 +9,7 @@ const UploadForm = () => {
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
-
+//check
   const uploadFile = async () => {
     if (file) {
       const formData = new FormData();
