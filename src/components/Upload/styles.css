@@ -14,3 +14,9 @@
 .upload-button {
   margin-top: 10px;
 }
+/* Add this CSS to your styles.css */
+.file-details {
+  overflow: auto; /* Enable scrollbars if content overflows */
+  max-height: 200px; /* Adjust the max-height as needed */
+}
+

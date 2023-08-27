@@ -16,7 +16,7 @@ const UploadForm = () => {
       formData.append('file', file);
 
       try {
-        const response = await axios.post('http://localhost:5000/upload', formData); // Use Axios for the POST request
+        const response = await axios.post('https://rapid-backend.onrender.com/upload', formData); // Use Axios for the POST request
         console.log(response.data); // Check the response in the browser console
         setFileDetails('File uploaded successfully'); // Update fileDetails with a message
       } catch (error) {
@@ -27,7 +27,7 @@ const UploadForm = () => {
 
   const getFileDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/file_info/${file.name}`); // Use Axios for the GET request
+      const response = await axios.get(`https://rapid-backend.onrender.com/file_info/${file.name}`); // Use Axios for the GET request
       console.log(response.data); // Check the response in the browser console
       setFileDetails(response.data.fileDetails);
     } catch (error) {
@@ -35,7 +35,7 @@ const UploadForm = () => {
     }
   };
 
-  return (
+   return (
     <div className="card upload-card">
       <div className="card-body">
         <h5 className="card-title upload-title">Upload File</h5>
@@ -51,7 +51,7 @@ const UploadForm = () => {
             <div className="card">
               <div className="card-body">
                 <h6>File Information:</h6>
-                <pre>{fileDetails}</pre>
+                <pre className="file-details">{fileDetails}</pre>
               </div>
             </div>
           </div>
