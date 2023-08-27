@@ -2,8 +2,8 @@
 CONTAINER_NAME1="my-container"
 CONTAINER_NAME2="my-container-back"
 MY_NAME="anmolbakshi12"
-FRONTEND_IMAGE="test:0.0.1.RELEASE"
-BACKEND_IMAGE="test-back:0.0.2.RELEASE"
+FRONTEND_IMAGE="frontend"
+BACKEND_IMAGE="backend"
 docker stop "$CONTAINER_NAME1" >/dev/null 2>&1
 docker rm "$CONTAINER_NAME1" >/dev/null 2>&1
 
