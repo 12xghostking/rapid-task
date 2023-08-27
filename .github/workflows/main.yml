@@ -26,11 +26,11 @@ jobs:
     - name: Build and Push Frontend Docker image
       working-directory: ./
       run: |
-        docker build -t anmolbakshi21/frontend .
-        docker push anmolbakshi21/frontend
+        docker build -t anmolbakshi21/task .
+        docker push anmolbakshi21/task
 
     - name: Build and Push Backend Docker image
       working-directory: ./backend
       run: |
-        docker build -t anmolbakshi21/backend .
-        docker push anmolbakshi21/backend
+        docker build -t anmolbakshi21/task-back .
+        docker push anmolbakshi21/task-back
