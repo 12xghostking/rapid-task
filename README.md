@@ -1,26 +1,58 @@
-Created The task for RAPIDFORT
+**Project Name:** RapidFort task
 
-Tech Stack used-REACTJS,NODEJS,EXPRESSJS,DOCKER,KUBERNETES,SHELL.
+**Project Link:** https://rapid-task.netlify.app/
 
-Folder structure-The main branch is the frontend of the project and can be started by<br>
-1.npm run install<br>
-2.npm run start<br>
-<br>
-Inside the main branch is the backend of the project and can be started by <br>
-1.npm run install<br>
-2.npm run start <br>
+**Description:** This project contains backend and frontend for a REST web server that lets users upload the files and in return get its type and path.
 
-The repository has a github action workflow attached to it that is executed on every commit<br>
-It builds 2 separate docker images on my profile anmolbakshi12 called frontend and backend<br>
-It builds them using 2 separate docker files present in both the frontend and then also inside the backend folder.
-<br>Thus it creates and pushes separate docker images for both my frontend and backend on every commit to the main branch.
 
-The repository also has a shell script to run the containers locally on my machine that is executed by ./run_container.sh
+****Endpoints****
+https://rapid-backend.onrender.com/
 
-The repository finally has separate deployment.yaml and service.yaml files for both frontend and backend to make 2 separate kubernetes pods and services.
-<br>They are working using load balancers and are working on my machine on port 70 and port 80 for backend and frontend respectively.
 
-The site for testing is also deployed and can be accessed on https://rapid-task.netlify.app/
-<br>(kindly give some time after uploading as the backend is deployed on a free site and is slow to access sometimes)
 
-Thank you!
+**File Upload**
+
+**Endpoint:** /upload
+
+**HTTP Method:** POST
+
+**Description:** Use this endpoint to upload a file to the server. The server processes the uploaded file and provides detailed information about it.
+
+
+**Request**
+GET /file_info/:filename
+
+
+**Response**
+
+HTTP Status 200 OK:
+
+
+HTTP Status 400 Bad Request (No file uploaded):
+
+
+
+**Prerequisites**
+Before you begin setting up and running the application ensure you have met the following prerequisites:
+
+**Software Requirements**
+**Node.js:** The project is built using Node.js, so you need to have it installed on your machine. You can download it from the official Node.js website.
+**ReactJs** The frontend is built using reactjs,so you need it installed.
+**Docker:** If you plan to build and run the project using Docker containers, make sure you have Docker installed. You can download Docker Desktop for your operating system from the Docker website.
+**Kubernetes** : If you intend to deploy the web server on a Kubernetes cluster, ensure you have access to a Kubernetes cluster and kubectl command-line tool installed.
+
+****Key Features:****
+
+**File Upload**: Users can upload files of various types and sizes to the web server.
+
+**File Information :** The web server analyzes uploaded files and provides detailed information such as file type, file path using exec file command.
+
+**User Interface:** A simple and intuitive user interface is provided.
+
+**RESTful API:** The server follows REST principles, offering clear API endpoints for file upload and retrieval. Hosted app: https://rapid-task.netlify.app/
+
+**Docker container using github actions:** The project includes a workflow for easy deployment and isolation of 2 separate docker images of forntend and backend created with separate docker files on every commit to the main branch.
+
+**Used Bash Script to run the container:** In the folder a run_container.sh is present to run both the container of the backend and frontend on the machine.
+
+**Kubernetes Compatibility:** Kubernetes manifest files are provided for hosting the web server within a Kubernetes clusterI(which was for now created on a local machine using Docker Desktop).
