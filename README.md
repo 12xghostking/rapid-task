@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+**Project Name:** RapidFort task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Project Link:** https://rapid-task.netlify.app/
 
-## Available Scripts
+**Description:** This project contains backend and frontend for a REST web server that lets users upload the files and in return get its type and path.
 
-In the project directory, you can run:
 
-### `npm start`
+****Endpoints****
+https://rapid-backend.onrender.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+**File Upload**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Endpoint:** /upload
 
-### `npm run build`
+**HTTP Method:** POST
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Description:** Use this endpoint to upload a file to the server. The server processes the uploaded file and provides detailed information about it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Request**
+GET /file_info/:filename
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Response**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+HTTP Status 200 OK:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+HTTP Status 400 Bad Request (No file uploaded):
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Prerequisites**
+Before you begin setting up and running the application ensure you have met the following prerequisites:
 
-### Code Splitting
+**Software Requirements**
+**Node.js:** The project is built using Node.js, so you need to have it installed on your machine. You can download it from the official Node.js website.
+**ReactJs** The frontend is built using reactjs,so you need it installed.
+**Docker:** If you plan to build and run the project using Docker containers, make sure you have Docker installed. You can download Docker Desktop for your operating system from the Docker website.
+**Kubernetes** : If you intend to deploy the web server on a Kubernetes cluster, ensure you have access to a Kubernetes cluster and kubectl command-line tool installed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+****Key Features:****
 
-### Analyzing the Bundle Size
+**File Upload**: Users can upload files of various types and sizes to the web server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**File Information :** The web server analyzes uploaded files and provides detailed information such as file type, file path using exec file command.
 
-### Making a Progressive Web App
+**User Interface:** A simple and intuitive user interface is provided.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**RESTful API:** The server follows REST principles, offering clear API endpoints for file upload and retrieval. Hosted app: https://rapid-task.netlify.app/
 
-### Advanced Configuration
+**Docker container using github actions:** The project includes a workflow for easy deployment and isolation of 2 separate docker images of forntend and backend created with separate docker files on every commit to the main branch.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Used Bash Script to run the container:** In the folder a run_container.sh is present to run both the container of the backend and frontend on the machine.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Kubernetes Compatibility:** Kubernetes manifest files are provided for hosting the web server within a Kubernetes clusterI(which was for now created on a local machine using Docker Desktop).
