@@ -2,8 +2,9 @@ name: Build and Push Docker Images
 
 on:
   push:
-    branches:
-      - main
+    # Trigger on any push to any branch
+    # branches:
+    #   - main
 
 jobs:
   build-and-push:
