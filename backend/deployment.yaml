@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: anmolbakshi12/test-back:0.0.2.RELEASE
+          image: docker.io/anmolbakshi12/backend:latest
           ports:
             - containerPort: 5000

@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: anmolbakshi12/test:0.0.1.RELEASE
+          image: docker.io/anmolbakshi12/frontend:latest
           ports:
             - containerPort: 3000
