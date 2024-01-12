@@ -51,6 +51,7 @@ Before you begin setting up and running the application ensure you have met the 
 
 **RESTful API:** The server follows REST principles, offering clear API endpoints for file upload and retrieval. Hosted app: https://rapid-task.netlify.app/
 
+
 **Docker container using github actions:** The project includes a workflow for easy deployment and isolation of 2 separate docker images of forntend and backend created with separate docker files on every commit to the main branch.
 
 **Used Bash Script to run the container:** In the folder a run_container.sh is present to run both the container of the backend and frontend on the machine.
